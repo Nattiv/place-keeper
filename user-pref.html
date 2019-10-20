@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form-style.css">
+
+    <title>User-Preferations</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo"><img class="hamburger-menu" src="img/globe_PNG28.png"></div>
+            <ul class="nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="user-pref.html">FORM</a></li>
+                <li><a href="map.html" class="last-link">MAP</a></li>
+            </ul>
+            <div class="hamburger"><img src="img/hamburger-button-png-6.png" class="img-hamburger"
+                    onclick="onToggleMenu()"></div>
+        </div>
+    </nav>
+
+    <section class="main form">
+        <h3 class="header-form">Enter your details & preferations</h3>
+        <form class="form-main">
+            <label class="form-name" id="fName">First Name</label>
+            <input type="text" placeholder="Your Name" id="first name">
+            <label class="form-name" id="lName">Last Name</label>
+            <input type="text" placeholder="Last Name" id="last-name">
+            <label class="form-name">E-mail</label>
+            <input type=email placeholder="Your E-mail" id="e-mail">
+            <label class="form-name age-scale">How old are you</label>
+            <input type="range" min="0" max="100" class="age-scale" onchange="showAge(this.value);" />
+            <span id="sAge" class="age-scale">18</span>
+            <article class="form-color">
+                <label class="form-name">Enter your favorite <i>background color:</i></label>
+                <input type="color" name="fav-color" value="#ff0000" id="fav-background-color">
+            </article>
+            <article class="form-color">
+                <label class="form-name">Enter your favorite <i>font color:</i></label>
+                <input type="color" name="fav-color" value="#ff0000" id="fav-text-color">
+            </article>
+            <label class="form-name">Enter your birthdate</label>
+            <input type="date" id="user-birth-date" onchange="onGetForecast()">
+            <input type="submit" id="submit-btn" onclick="onSubmit(event)" value="Register" />
+        </form>
+
+        <div id="myModal" class="screen" onclick="onCloseModal()">
+            <div class="modal-content">
+                <span class="close" onclick="onCloseModal()">&times;</span>
+                <p> HELLO YOUR   <span class="msg"> </span>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Odio rem nisi voluptatem dolore autem suscipit, 
+                voluptate ipsum facilis officiis aliquid quaerat cumque eum ut, blanditiis quas,
+                 recusandae deserunt numquam dolor.</p>
+                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Odio rem nisi voluptatem dolore autem suscipit, 
+                voluptate ipsum facilis officiis aliquid quaerat cumque eum ut, blanditiis quas,
+                 recusandae deserunt numquam dolor.</p>
+                 
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/form-service.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

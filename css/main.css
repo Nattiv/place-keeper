@@ -1,0 +1,392 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../font/Montserrat-Regular.ttf");
+}
+
+html {
+    font-family: Montserrat, monospace;
+}
+
+body {
+    color: #36311F;
+    background-color: #fff;
+    /* background-color: #79A9D1; */
+    margin: 0 auto;
+}
+
+nav {
+    background: #7D8CA3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-content {
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    max-width: 980px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 0px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo img {
+    width: 100px
+}
+
+a {
+    padding: 25px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    border-left: 1px solid #36311F;
+    transition: 3s all;
+}
+
+.last-link {
+    border-right: 1px solid #36311F;
+}
+
+.hamburger {
+    width: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+.home-main {
+    margin: 0 auto;
+    max-width: 980px;
+    border-right: 1px solid #7D8CA3;
+    border-left: 1px solid #7D8CA3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.id-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.id-section p {
+    text-align: center;
+}
+
+.id-section .input-id {
+    text-align: center;
+    border: 1px solid #7D8CA3;
+}
+
+.id-section button {
+    padding: 10px;
+    background: rgba(125, 140, 163, 0.301);
+}
+
+.h1 {
+    font-size: 30px;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+ul:last-child {
+    border-right: 1px solid #36311F;
+}
+
+/* ---MAP PAGE--- */
+
+#map {
+    height: 350px;
+    width: 100%;
+}
+
+.main {
+    max-width: 980px;
+    margin: 0 auto;
+    border-right: 1px solid rgb(208, 215, 226);
+    border-left: 1px solid rgb(208, 215, 226);
+}
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map-title {
+    padding-left: 10px;
+}
+
+.h3-table {
+    text-align: center;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(191, 196, 150);
+    border-left: 1px solid rgb(191, 196, 150);
+    margin-bottom: 0px;
+}
+
+.delete-btn {
+    padding: 15px;
+    background-color: #7D8CA3;
+    border-radius: 16px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    background-color: rgba(125, 140, 163, 0.575);
+}
+
+.img-get-my-loc {
+    width: 70px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.img-get-my-loc:hover {
+    width: 71px;
+}
+
+.modal-content-map {
+    position: absolute;
+}
+
+/* ---FORM--- */
+
+.header-form {
+    text-align: center;
+    margin: 0px;
+}
+
+.form {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-main {
+    padding: 15px;
+    padding-left: 5%;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-name {
+    padding: 8px;
+}
+
+.form-color {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+}
+
+.form-color input {
+    width: 30%;
+}
+
+input {
+    border: 0px;
+    padding: 10px;
+}
+
+#submit-btn {
+    margin-top: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#submit-btn:hover {
+    background-color: rgb(141, 153, 192);
+}
+
+/* ---MODAL--- */
+
+.screen {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 75%;
+    /* Could be more or less, depending on screen size */
+}
+
+.show-modal {
+    display: block;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ---MODAL-MAP--- */
+
+.modal-content-map {
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    height: 40%;
+    justify-content: space-between;
+    background-color: #fefefe;
+    top: 162px;
+    left: 0px;
+    padding: 7px;
+    border: 1px solid #888;
+    max-width: 15%;
+    background: #f2f2f2;
+}
+
+/* 
+.modal-content-map p {
+font-size: ;
+width: 10vw;
+} */
+
+.show-modal {
+    display: block;
+}
+
+.show-modal-map {
+    display: flex;
+}
+
+.save-place-btn {
+    background: rgba(125, 140, 163, 0.514);
+    padding: 10px;
+}
+
+.save-place-btn:hover {
+    background: rgba(125, 140, 163, 0.301);
+    cursor: pointer;
+    padding: 11px;
+}
+
+.close-modal-map {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width:775px) {
+    ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 93px;
+        right: 0px;
+        background: rgba(125, 140, 163, 0.8);
+        padding: 0px;
+        border-top: 1px solid #36311F;
+        z-index: 1;
+    }
+    .show-menu {
+        display: block;
+    }
+    li {
+        text-align: center;
+        border-bottom: 1px solid #36311F;
+    }
+    a {
+        width: 75vw;
+    }
+    a:hover {
+        background: rgb(125, 140, 163);
+    }
+    .hamburger {
+        max-height: 80%;
+        display: block;
+        margin-top: 25px;
+        margin-right: 15px;
+    }
+    .hamburger img {
+        width: 50px;
+    }
+}
+
+@media (max-width:880px) {
+    .modal-content-map {
+        top: 93px;
+        min-width: 80%;
+        flex-direction: row;
+        height: 8%
+    }
+    .modal-content-map input {
+        padding: 5px
+    }
+}
+
+@media (max-width:480px) {
+    .modal-content-map {
+        height: 6%
+
+    }
+    .modal-content-map p {
+        display: none;
+    }
+    .img-get-my-loc {
+        width: 60px
+    }
+    td{
+        padding: 3px;
+    }
+}

@@ -1,0 +1,22 @@
+.nav-content {
+    max-width: 800px;
+}
+
+.last-link {
+    border-right: 1px solid #36311F;
+}
+
+.tr-form {
+    display: flex;
+}
+
+@media (max-width:525px) {
+    .age-scale {
+        display: none;
+    }
+    .form-color input {
+        width: 10%;
+    }
+    
+
+}

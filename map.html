@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>MAP</title>
+</head>
+
+<body onload="initMapPage()">
+    <nav>
+        <div class="nav-content">
+
+            <div class="logo"><img class="hamburger-menu" src="img/globe_PNG28.png"></div>
+            <ul class="nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="user-pref.html">FORM</a></li>
+                <li><a href="map.html" class="last-link">MAP</a></li>
+            </ul>
+            <div class="hamburger"><img src="img/hamburger-button-png-6.png" class="img-hamburger"
+                    onclick="onToggleMenu()"></div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <section class="map-header">
+            <h3 class="map-title"> YOUR MAP</h3>
+            <img src="img/gey_my_location1.jpg" class="img-get-my-loc" alt="Get my location" title="Get my location"
+                onclick="getLocation()">
+        </section>
+        <div id="map" onclick="showModalMap()"></div>
+        <div class="latclicked"></div>
+        <div class="longclicked"></div>
+
+        <h3 class="h3-table">Your places on the map</h3>
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Langtitude</td>
+                    <td>Latitude</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody class="places-kept">
+            </tbody>
+        </table>
+    </section>
+
+
+    <div class="modal-content-map">
+        <p> Enter the name of the location:</p>
+        <input type="txt" placeholder="Name of place - ex: Eilat" class="loc-name">
+        <button onclick="savePlace(value)" class="save-place-btn">Save Place</button>
+        <span class="close-modal-map" onclick="onCloseModalMap()">&times;</span>
+    </div>
+
+
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMhZMGq36sOwR2qHMPos5Kz7MZd2Qt-jU&callback=initMap">
+        </script>
+    <script src="js/place-service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
